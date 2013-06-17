@@ -27,6 +27,7 @@ import java.util.Set;
 
 import uk.co.senab.actionbarpulltorefresh.library.viewdelegates.AbsListViewDelegate;
 import uk.co.senab.actionbarpulltorefresh.library.viewdelegates.ScrollViewDelegate;
+import uk.co.senab.actionbarpulltorefresh.library.viewdelegates.StaggeredGridViewDelegate;
 import uk.co.senab.actionbarpulltorefresh.library.viewdelegates.WebViewDelegate;
 
 class InstanceCreationUtils {
@@ -42,6 +43,7 @@ class InstanceCreationUtils {
         BUILT_IN_DELEGATES.put(AbsListViewDelegate.SUPPORTED_VIEW_CLASS, AbsListViewDelegate.class);
         BUILT_IN_DELEGATES.put(ScrollViewDelegate.SUPPORTED_VIEW_CLASS, ScrollViewDelegate.class);
         BUILT_IN_DELEGATES.put(WebViewDelegate.SUPPORTED_VIEW_CLASS, WebViewDelegate.class);
+        BUILT_IN_DELEGATES.put(StaggeredGridViewDelegate.SUPPORTED_VIEW_CLASS, StaggeredGridViewDelegate.class);
     }
 
     static PullToRefreshAttacher.ViewDelegate getBuiltInViewDelegate(final View view) {
