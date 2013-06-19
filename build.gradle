@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4'
+    }
+}
+apply plugin: 'android-library'
+
+dependencies {
+compile project(':libraries:ext-staggeredgridview')
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 17
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'library_2/AndroidManifest.xml'
+            java.srcDirs = ['library_2/src']
+            resources.srcDirs = ['library_2/src']
+            aidl.srcDirs = ['library_2/src']
+            renderscript.srcDirs = ['library_2/src']
+            res.srcDirs = ['library_2/res']
+            assets.srcDirs = ['library_2/assets']
+        }
+
+        instrumentTest.setRoot('tests')
+    }
+}
